@@ -1,0 +1,29 @@
+<!--css framework and normalize-->
+<link class="common-css" rel="stylesheet" href="../common/normalize.css">
+<link class="common-css" rel="stylesheet" href="../common/skeleton.css">
+ 
+<!--common css file, these get collected and appended to to head of the finalized landing page on template instance save -->
+<link class="common-css" rel="stylesheet" type="text/css" href="../common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.css">
+ 
+<!--block css file, 
+Contents get injected into the canvas above block markup to facilitate live block theme changes. 
+For finalized resources the template instance css string gets turned into a css minified string and appended in the head of the finalized instance mergedHtml.
+-->
+<link class="block-css" rel="stylesheet" type="text/css" href="style.css">
+ 
+<div class="block-style-1" aria-description="This is a block, there are many like it. But this one is mine." >   
+    <div class="block-style-1__title">
+        Super Startup, Prototype, Agile
+        <img src="images/temp.png" />
+    </div>
+</div>
+ 
+<!--block common script file
+Scripts tag gets added to the canvas, One script tag gets added to the end of the finalized landing page instance on save.
+-->
+<script class="common-script" type="javascript" href="../common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.js"></script>
+ 
+<!--block script file
+Script gets injected into the canvas because it is dynamic. Users may change plugin settings for example. For the finalized page instance contents get concatenated and added inline to the very end of the file
+-->
+<script class="block-script"  type="javascript" href="scripts.js"></script>
