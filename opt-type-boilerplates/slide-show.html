@@ -1,0 +1,115 @@
+<link class="common-css" href="opt_assets/blocks/common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.css" />
+<div opt-id="my-slideshow" opt-type="slide-show">
+    <!-- element the slide show instance will be built on -->
+    <div class="jQueryPageBackgroundPro"></div>
+     
+    <!--
+    slide title template markup, this will get used for all the slide titles
+    the PE will grab this and pass it in as the slide title text
+    -->
+    <!-- block template -->
+    <div opt-type="template" class="my-block__slide-title-wrapper" style="display:none;" >
+        <div opt-id="slide-1" opt-type="html" class=".my-block__slide-title" style="display:none;" >
+        Default Slide Text
+        </div>
+        <img opt-id="slide-1-img" src="images/default.png" opt-type="image" />
+    </div>
+ 
+    <!-- slideshow markup this is used to get and set the slide show titles
+    <div class="my-block__slide-title-wrapper" style="display:none;" >
+        <div opt-id="slide-uuid" opt-type="html" class="my-block__slide-title">
+            Slide Title Text 1
+        </div>
+        <img opt-id="slide-uuid-img" src="images/default.png" opt-type="image" />
+    </div>
+    ...
+    ...
+    <div class="my-block__slide-title-wrapper" style="display:none;" >
+        <div opt-id="slide-uuid-n" opt-type="html" class="my-block__slide-title">
+            Slide Title Text n
+        </div>
+        <img opt-id="slide-uuid-img-n" src="images/default.png" opt-type="image" />
+    </div>
+ 
+    <script class="" src="opt_assets/blocks/common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.js" ></script>
+    <script class="">
+        /*
+        this contains all the js from the example above. The block developer will set the defaults here
+        then when the user makes changes via the PE it get overwritten in the plugin options and the plugin will re init itself
+        */
+    </script>
+ 
+</div>
+
+$("#sliderTarget").jQueryPageBackgroundPro({
+                "backgrounds": [
+                    {
+                        "type": "video",
+                        "path": "/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.mp4",
+                        "title": "Supports HTML5 mp4 video background.",
+                        "titleVertPosition": "top",
+                        "titleHorzPosition": "center",
+                        "titleTransition": {
+                            "fade": true,
+                            "slide": "top",
+                            "speed": 3000,
+                            "distance": 500  
+                        },
+                        "placeholderImage": "/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.jpg",
+                        "videoType": "mp4"
+                         
+                    },
+                    {
+                        "type": "image",
+                        "path":  "/jQueryPageBackgroundPro/images/exampleImages/image13.jpg",
+                        "title": "Easily transition and style slide titles.",
+                        "titleVertPosition": "top",
+                        "titleHorzPosition": "center",
+                        "titleTransition": {
+                            "fade": true,
+                            "slide": "bottom"  
+                        },
+                    },
+                    {
+                        "type": "image",
+                        "path":  "/jQueryPageBackgroundPro/images/exampleImages/image9.jpg",
+                        "title": "Transition finished call back hooks.",
+                        "titleVertPosition": "top",
+                        "titleHorzPosition": "center",
+                        "titleTransition": {
+                            "fade": true, 
+                            "slide": "top" 
+                        }, 
+                    }
+                ],
+                "targetElement": $('#block-element'),
+                "transition": "slide",
+                "transitionDirection": "left-right",
+                "easing": "easeOutQuad",  // see http://api.jqueryui.com/easings/
+                "speed": 700,
+                 
+                /* slide show */
+                "slideShow": false,
+                "slideShowSpeed": 3000,
+                 
+                /* control arrows */
+                "controlArrow": "arrow-14-white",
+                "controlVertPosition": "jqpbp-controls-bottom",
+                 
+                /* navigation */
+                "navigation":{
+                    "show": true,
+                    "style": "square",         //['round', 'square']
+                    "numbers": true,
+                    "vertPostiton": "bottom", //top, bottom
+                    "horzPostiion": "center",  //left, center, right
+                    "thumbnail": true
+                },
+                 
+                "extControlSelector": ".primary-nav .nav-link",
+                "extControlEvent": "click",
+                "extControlAction": "next",
+                 
+                "debug": true
+            });
+
