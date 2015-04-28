@@ -1,9 +1,13 @@
+<!--Block Info
+    @author: dev@ontraport.com
+-->
 <!--css framework and normalize-->
-<link class="common-css" rel="stylesheet" href="../common/normalize.css">
-<link class="common-css" rel="stylesheet" href="../common/skeleton.css">
+<link class="common-css" rel="stylesheet" href="../../common/skeleton/css/normalize.css">
+<link class="common-css" rel="stylesheet" href="../../common/skeleton/css/skeleton.css">
+<link class="common-css" rel="stylesheet" href="../../common/skeleton/css/skeleton.ontraport.css">
  
 <!--common css file, these get collected and appended to to head of the finalized landing page on template instance save -->
-<link class="common-css" rel="stylesheet" type="text/css" href="../common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.css">
+<link class="common-css" rel="stylesheet" type="text/css" href="../../common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.css">
  
 <!--block css file, 
 Contents get injected into the canvas above block markup to facilitate live block theme changes. 
@@ -11,11 +15,14 @@ For finalized resources the template instance css string gets turned into a css 
 -->
 <link class="block-css" rel="stylesheet" type="text/css" href="style.css">
 
-<div class="row" opt-type="block" opt-id="" opt-block-type="product detail" opt-alias="invision product detail"> 
-    <div class="block-style-1" aria-description="This is a block, there are many like it. But this one is mine." >   
-        <div class="block-style-1__title">
-            Super Startup, Prototype, Agile
-            <img src="images/temp.png" />
+<div opt-id="block-background" opt-type="background">
+    
+    <div class="container">     
+        <div class="block-style-1"  opt-block-style-id="1" aria-description="This is a block, there are many like it. But this one is mine." >  
+            <div class="block-style-1__title">
+                Super Startup, Prototype, Agile
+                <img src="images/temp.png" />
+            </div>
         </div>
     </div>
 </div>
