@@ -19,18 +19,81 @@
         
         /* Block Selector Styles */
         [opt-id] {
+            transition: transform 2s ease-in-out;
+            transform: translateY(0px);
             position: relative;
+            background-color: #ffffff;
         }
+        
+        .opt-row--slide-up{
+             transform: translateY(-4000px);
+        }
+        
+        .opt-row--slide-down{
+             transform: translateY(4000px);
+         }
+        
+        .opt-row--border-bottom{
+            border-bottom: 1px solid black;
+        }
+        
+        .opt-row--border-top{
+            border-top: 1px solid black;
+        }
+        
         .block-style-animate{
             -webkit-transition: left .7s ease-in-out; 
             transition: left .7s ease-in-out;
         }
+        
         .block-place-holder {
             -webkit-transition: height .7s ease-in-out; 
             transition: height .7s ease-in-out;
         }
-      
         
+        .animated {
+            -webkit-animation-duration:.3s;
+            animation-duration:.3s;
+            -webkit-animation-fill-mode:both;
+            animation-fill-mode:both;
+            -webkit-animation-timing-function:ease-out;
+            animation-timing-function:ease-out;
+            -webkit-animation-delay: .7s;
+            animation-delay: .7s;
+        }
+        
+        @-webkit-keyframes bounceIn {
+            0% {
+                
+                -webkit-transform:scale(0);
+            }
+            
+            70%{
+                -webkit-transform:scale(1.2);
+            }
+            100%{
+                -webkit-transform:scale(1);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                transform:scale(0);
+            }
+          
+            70%{
+                transform:scale(1.2);
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+        
+        .bounceIn{
+            -webkit-animation-name:bounceIn;
+            animation-name:bounceIn
+        }
+      
     </style>
  
 </head>
