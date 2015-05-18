@@ -1,0 +1,105 @@
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: 400;
+	font-style: normal;
+}
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 26px;
+	line-height: 26px;
+	font-weight: 400;
+	font-style: normal;
+}
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 400;
+	font-style: normal;
+}
+.label {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 400;
+	font-style: normal;
+}
+.button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 600;
+	font-style: normal;
+}
+.large-body-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 300;
+	font-style: normal;
+}
+.body-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 300;
+	font-style: normal;
+}
+.blockquote {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 400;
+	font-style: italic;
+}
+span.primary-color, h1.primary-color, h2.primary-color, h3.primary-color, p.primary-color {
+	color: #328ed3;
+}
+div.primary-color, a.primary-color, footer.primary-color, header.primary-color, body.primary-color {
+	background-color: #328ed3;
+}
+hr.primary-color, img.primary-color, a.primary-color, div.primary-color {
+	border-color: #328ed3;
+}
+span.complimentary-color, h1.complimentary-color, h2.complimentary-color, h3.complimentary-color, p.complimentary-color {
+	color: #91cd47;
+}
+div.complimentary-color, a.complimentary-color, footer.complimentary-color, header.complimentary-color, body.complimentary-color {
+	background-color: #91cd47;
+}
+hr.complimentary-color, img.complimentary-color, a.complimentary-color, div.complimentary-color {
+	border-color: #91cd47;
+}
+span.dark-color, h1.dark-color, h2.dark-color, h3.dark-color, p.dark-color {
+	color: #000000;
+}
+div.dark-color, a.dark-color, footer.dark-color, header.dark-color, body.dark-color {
+	background-color: #000000;
+}
+hr.dark-color, img.dark-color, a.dark-color, div.dark-color {
+	border-color: #000000;
+}
+span.complimentary-light-color, h1.complimentary-light-color, h2.complimentary-light-color, h3.complimentary-light-color, p.complimentary-light-color {
+	color: #7898de;
+}
+div.complimentary-light-color, a.complimentary-light-color, footer.complimentary-light-color, header.complimentary-light-color, body.complimentary-light-color {
+	background-color: #7898de;
+}
+hr.complimentary-light-color, img.complimentary-light-color, a.complimentary-light-color, div.complimentary-light-color {
+	border-color: #7898de;
+}
+span.white-color, h1.white-color, h2.white-color, h3.white-color, p.white-color {
+	color: #ffffff;
+}
+div.white-color, a.white-color, footer.white-color, header.white-color, body.white-color {
+	background-color: #ffffff;
+}
+hr.white-color, img.white-color, a.white-color, div.white-color {
+	border-color: #ffffff;
+}
+.spacing {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
