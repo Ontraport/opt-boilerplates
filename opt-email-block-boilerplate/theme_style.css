@@ -81,13 +81,13 @@ div.dark-color, a.dark-color, footer.dark-color, header.dark-color, body.dark-co
 hr.dark-color, img.dark-color, a.dark-color, div.dark-color {
 	border-color: #000000;
 }
-span.complimentary-light-color, h1.complimentary-light-color, h2.complimentary-light-color, h3.complimentary-light-color, p.complimentary-light-color {
+span.light-color, h1.light-color, h2.light-color, h3.light-color, p.light-color {
 	color: #7898de;
 }
-div.complimentary-light-color, a.complimentary-light-color, footer.complimentary-light-color, header.complimentary-light-color, body.complimentary-light-color {
+div.light-color, a.light-color, footer.light-color, header.light-color, body.light-color {
 	background-color: #7898de;
 }
-hr.complimentary-light-color, img.complimentary-light-color, a.complimentary-light-color, div.complimentary-light-color {
+hr.light-color, img.light-color, a.light-color, div.light-color {
 	border-color: #7898de;
 }
 span.white-color, h1.white-color, h2.white-color, h3.white-color, p.white-color {
