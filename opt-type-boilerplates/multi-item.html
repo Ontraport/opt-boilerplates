@@ -1,0 +1,54 @@
+<div class="block-wrapper block-style-1 white-color spacing" opt-id="block-background" opt-type="background">
+    
+<!--
+    Here is the multi-item block.  Required options:
+    
+    1) opt-template-orientation - ["horizontal" or "vertical"] This is for if the repeating elements should be horizontal or vertical.
+    2) opt-multi-min - [number] This is the minimum number of multi-items.
+    3) opt-multi-max - [number] This is the maximum number of multi-items.
+--> 
+    <div class="block-style-1__wrapper u-cf" opt-id="article-container" opt-type="multi-item" opt-template-orientation="horizontal" opt-multi-min="1" opt-multi-max="6">  
+        
+		<!-- START DEFAULT ITEMS -->
+        <div class="column one-half opt-center" opt-type="group" opt-id="item1">
+			<!--             	 
+				For the default items, pay attention to the opt-id schema "elementID" + "_" + PARENT-OPT-ID
+			-->
+            <p class="dark-color block-style-1__content body-text" opt-id="bodyText-1_item1" opt-alias="Section Body" opt-type="html" >
+               Think about that for a second: the same price, the same features, the same benefits and the same 
+               product can create average sales, or… Simple changes to copy can boost the bottom line by 19.5x. 
+               That’s huge. 
+            </p>
+            
+        </div>
+        <div class="column one-half opt-center" opt-type="group" opt-id="item2">
+            
+            <p class="dark-color block-style-1__content body-text" opt-id="bodyText-1_item2" opt-alias="Section Body" opt-type="html" >
+               Think about that for a second: the same price, the same features, the same benefits and the same 
+               product can create average sales, or… Simple changes to copy can boost the bottom line by 19.5x. 
+               That’s huge. 
+            </p>
+            
+        </div>
+		<!-- END DEFAULT ITEMS -->
+        
+        
+        
+        <template>
+			<!--         		 
+				Be sure to include the opt-id="multi-item-template", we have selectors for this ID.
+			-->
+            <div class="opt-center" opt-id="multi-item-template" opt-alias="item">
+                
+                <p class="dark-color block-style-1__content body-text" opt-id="bodyText-1" opt-alias="Section Body" opt-type="html" >
+                   Think about that for a second: the same price, the same features, the same benefits and the same 
+                   product can create average sales, or… Simple changes to copy can boost the bottom line by 19.5x. 
+                   That’s huge. 
+                </p>
+                
+            </div>
+        </template>
+        
+    </div>
+
+</div>
