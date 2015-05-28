@@ -4,6 +4,20 @@
 -->
 
 <div opt-id="social-sharing-1" opt-type="social-sharing group" opt-alias="Social Sharing" data-current-iconset="round-reverse">
+    <!-- SOCIAL LINK TEMPLATE - This should be the :first-child for performance reasons. -->
+    <template class="template--social-link">
+        <!--
+            You can wrap the following code in as many elements as you need...
+            But don't change this nesting: <div> <a> <img> </a> </div>
+            If you need to change the nesting, please talk to Ray!
+        -->
+        <div opt-id="social-" opt-type="group">
+            <a href="javascript://" opt-id="social-link-" opt-type="social-link">
+                <img src="../../common/iconsets/circle-border/{{NEW_UNUSED_ICON_TYPE}}.png" />
+            </a>
+        </div>
+    </template>
+
     <!--
         Each <a opt-type="social-link" /> icon must be wrapped in a <div opt-type="group" />.
         This DIV can only contain a single child of <a opt-type="social-link" />.
@@ -34,13 +48,4 @@
             <img src="../../common/iconsets/circle-border/linkedin.png" />
         </a>
     </div>
-    
-    <!-- block template -->
-    <template class="template--social-link">
-        <div opt-id="social-" opt-type="group">
-            <a href="javascript://" opt-id="social-link-" opt-type="social-link">
-                <img src="../../common/iconsets/circle-border/{{NEW_UNUSED_ICON_TYPE}}.png" />
-            </a>
-        </div>
-    </template>
 </div>
