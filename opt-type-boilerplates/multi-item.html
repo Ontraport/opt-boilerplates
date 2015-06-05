@@ -1,5 +1,3 @@
-<div class="block-wrapper block-style-1 white-color spacing" opt-id="block-background" opt-type="background">
-    
 <!--
     Here is the multi-item block.  Required options:
     
@@ -7,6 +5,8 @@
     2) opt-multi-min - [number] This is the minimum number of multi-items.
     3) opt-multi-max - [number] This is the maximum number of multi-items.
 --> 
+
+	<!-- 	START LANDING PAGE EXAMPLE -->
     <div class="block-style-1__wrapper u-cf" opt-id="article-container" opt-type="multi-item" opt-template-orientation="horizontal" opt-multi-min="1" opt-multi-max="6">  
         
 		<!-- START DEFAULT ITEMS -->
@@ -50,5 +50,73 @@
         </template>
         
     </div>
+	<!-- 	END LANDING PAGE EXAMPLE -->
+	
+	
+	<!-- 	START NON-SUB-GRID EMAIL EXAMPLE -->
+	<tr opt-id="multi-item-1" opt-type="multi-item" opt-template-orientation="horizontal" opt-multi-min="2" opt-multi-max="9">
+        <td class="wrapper" opt-type="group" opt-id="item1" opt-alias="item">           
+            <table class="six columns">
+                <tr>
+                    <td class="text-pad">
+                        <img src="../../common/stockPhoto/ontraport-logo.png" opt-id="img-1_item1" opt-alias="Image" opt-type="image" />
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+        </td>                                                                                
+        <td class="wrapper last" opt-type="group" opt-id="item2" opt-alias="item">
+            <table class="six columns">
+                <tr>
+                    <td class="text-pad">
+                    	<img src="../../common/stockPhoto/ontraport-logo.png" opt-id="img-1_item2" opt-alias="Image" opt-type="image" />
+                    </td>
+                    <td class="expander"></td>
+               </tr>
+            </table>
+        </td>
+        
+        <template>
+			<td opt-type="group" opt-id="multi-item-template" opt-alias="item">
+				<table>
+					<tr>
+						<td class="text-pad">
+							<img src="../../common/stockPhoto/ontraport-logo.png" opt-id="img-1" opt-alias="Image" opt-type="image" />
+						</td>
+						<td class="expander"></td>
+					</tr>
+				</table>
+			</td>
 
-</div>
+        </template>
+    </tr>
+    <!-- 	END NON-SUB-GRID EMAIL EXAMPLE -->
+    
+    
+    <!-- 	START SUB-GRID EMAIL EXAMPLE 
+	    * NOTE * The opt-options="sub-columns" attribute here.
+    -->
+    <table class="six column">
+		<tr opt-id="multi-item-1" opt-alias="Navigation Links" opt-type="multi-item" opt-template-orientation="horizontal" opt-multi-min="2" opt-multi-max="4" opt-options="sub-columns">
+			<td class="four sub-columns" opt-id="item1" opt-type="group" opt-alias="menu item">
+				<a class="dark-color-text large-body-text" opt-id="link-1_item1" opt-type="link group" opt-alias="Nav Link" href="javascript://">
+					<span opt-id="link-text-1_item1" opt-type="html">Link 1</span>
+				</a>
+			</td>
+			<td class="four last sub-columns" opt-id="item2" opt-type="group" opt-alias="menu item">
+				<a class="dark-color-text large-body-text" opt-id="link-1_item2" opt-type="link group" opt-alias="Nav Link" href="javascript://">
+					<span opt-id="link-text-1_item2" opt-type="html">Link 2</span>
+				</a>
+			</td>
+			<td class="expander"></td>
+			
+			<template>
+				<td opt-id="multi-item-template" opt-type="group" opt-alias="item">
+					<a class="dark-color-text large-body-text" opt-id="link-1" opt-type="link group" opt-alias="Nav Link" href="javascript://">
+						<span opt-id="link-text-1" opt-type="html">Link 3</span>
+					</a>
+				</td>
+			</template>
+		</tr>
+    </table>
+    <!-- 	END SUB-GRID EMAIL EXAMPLE -->
