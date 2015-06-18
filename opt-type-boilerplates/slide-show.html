@@ -1,117 +1,165 @@
 <link class="common-css" href="opt_assets/blocks/common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.css" />
 
-<div opt-id="my-slideshow" opt-type="slide-show">
+<div class="js-opt-slide-show" opt-id="slide-show-1" opt-type="slide-show group" slideShow="true" slideShowDuration="5000" >
     
     <!-- element the slide show instance will be built on -->
-    <div class="jQueryPageBackgroundPro"></div>
-     
-    <!--
-    slide title template markup, this will get used for all the slide titles
-    the PE will grab this and pass it in as the slide title text
-    -->
+    <div class="slide-show-17__slide-show jQueryPageBackgroundPro"  ></div>
+    
+    <!-- slide elements for the palette editor, note slide shows are set to operate with only a title, sub title and a button -->    
+    <div class="slides-wrapper">
+        
+        <div opt-id='slide-1' opt-type="group" class="js-slide my-block__slide-title-wrapper" >
+            <div opt-id="slide-1-title" opt-type="html" opt-alias="Slide Title"  class="js-opt-slide-title slide-show-17__slide-title white-color-text body-text" >
+                ONLY FOOLS RUSH IN
+            </div>
+            <div opt-id="slide-1-text" opt-type="html" class="js-opt-slide-html slide-show-17__slide-html white-color-text body-text" >
+                How to perform the perfect product launch
+            </div>
+            <a opt-id="slide-1-button" opt-type="button" opt-alias="Slide Button" class="js-opt-slide-button button button-style button--round slide-show-17__static-button white-color-background dark-color-border dark-color-text" href="#">
+                READ MORE
+            </a>
+            <img opt-id="slide-1-img" opt-type="image" opt-alias="Slide Image" class="js-opt-slide-img"  src="../../common/stockPhoto/desktop.JPG" />
+        </div>
+       
+        
+        <div opt-id='slide-2' opt-type="group" class="js-slide my-block__slide-title-wrapper" >
+            <div opt-id="slide-2-title" opt-type="html" opt-alias="Slide Title"  class="js-opt-slide-title slide-show-17__slide-title white-color-text body-text" >
+                THE ULTIMATE LANDING PAGE GUIDE
+            </div>
+            <div opt-id="slide-2-text" opt-type="html" opt-alias="Slide Message" class="js-opt-slide-html slide-show-17__slide-html white-color-text body-text" >
+                Optimizing landing pages is now easier than ever with our educational guide.
+            </div>
+            <a opt-id="slide-2-button" opt-type="button" opt-alias="Slide Button" class="js-opt-slide-button button button-style button--round slide-show-17__static-button white-color-background dark-color-border dark-color-text" href="#">
+                READ MORE
+            </a>
+            <img opt-id="slide-2-img" opt-type="image" opt-alias="Slide Image" class="js-opt-slide-img" src="../../common/stockPhoto/liston2banner.jpg"/>
+        </div>
+        
+        <div opt-id='slide-3' opt-type="group" class="js-slide my-block__slide-title-wrapper" >
+            <div opt-id="slide-3-title" opt-type="html" opt-alias="Slide Title"  class="js-opt-slide-title slide-show-17__slide-title white-color-text body-text" >
+                ARE BUSINESS INCUBATORS DEAD?
+            </div>
+            <div opt-id="slide-3-text" opt-type="html" opt-alias="Slide Message" class="js-opt-slide-html slide-show-17__slide-html white-color-text body-text" >
+                Far from it - they're here to stay.
+            </div>
+            <a opt-id="slide-3-button" opt-type="button" opt-alias="Slide Button" class="js-opt-slide-button button button-style button--round slide-show-17__static-button white-color-background dark-color-border dark-color-text" href="#">
+                READ MORE
+            </a>
+            <img opt-id="slide-3-img" opt-type="image" opt-alias="Slide Image" class="js-opt-slide-img" src="../../common/stockPhoto/87.jpg"/>
+        </div>
+    
+    </div>
+    
     <!-- block template -->
-    <div opt-type="template" class="my-block__slide-title-wrapper" style="display:none;" >
-        <div opt-id="slide-1" opt-type="html" class=".my-block__slide-title" style="display:none;" >
-        Default Slide Text
+    <template>
+        <div opt-id='slide-i' opt-type="group" class="js-slide my-block__slide-wrapper">
+            <div opt-id="slide-title-i"  opt-type="html"   opt-alias="Slide Title"   class="js-opt-slide-title  slide-show-17__slide-title  white-color-text body-text" >
+                Default Slide Title
+            </div>
+            <div opt-id="slide-html-i"   opt-type="html"   opt-alias="Slide Message" class="js-opt-slide-html   slide-show-17__slide-html white-color-text body-text">
+                Default Slide Text
+            </div>
+            <a   opt-id="slide-button-i" opt-type="button" opt-alias="Slide Button"  class="js-opt-slide-button slide-show-17__static-button white-color-background dark-color-border dark-color-text button button-style button--round" href="#">
+                Default Button Text
+            </a>
+            <img opt-id="slide-img-i"    opt-type="image"  opt-alias="Slide Image"   class="js-opt-slide-img" src="images/default.png"  />
         </div>
-        <img opt-id="slide-1-img" src="images/default.png" opt-type="image" />
-    </div>
+    </template>
+                
  
-    <!-- slideshow markup this is used to get and set the slide show titles
-    <div class="my-block__slide-title-wrapper" style="display:none;" >
-        <div opt-id="slide-uuid" opt-type="html" class="my-block__slide-title">
-            Slide Title Text 1
-        </div>
-        <img opt-id="slide-uuid-img" src="images/default.png" opt-type="image" />
-    </div>
-    ...
-    ...
-    <div class="my-block__slide-title-wrapper" style="display:none;" >
-        <div opt-id="slide-uuid-n" opt-type="html" class="my-block__slide-title">
-            Slide Title Text n
-        </div>
-        <img opt-id="slide-uuid-img-n" src="images/default.png" opt-type="image" />
-    </div>
- 
-    <script class="" src="opt_assets/blocks/common/jQueryPageBackgroundPro/jQueryPageBackgroundPro.min.js" ></script>
-    <script class="">
-        /*
-        this contains all the js from the example above. The block developer will set the defaults here
-        then when the user makes changes via the PE it get overwritten in the plugin options and the plugin will re init itself
-        */
-    </script>
-    -->
 </div>
 
-$("#sliderTarget").jQueryPageBackgroundPro({
-                "backgrounds": [
-                    {
-                        "type": "video",
-                        "path": "/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.mp4",
-                        "title": "Supports HTML5 mp4 video background.",
-                        "titleVertPosition": "top",
-                        "titleHorzPosition": "center",
-                        "titleTransition": {
-                            "fade": true,
-                            "slide": "top",
-                            "speed": 3000,
-                            "distance": 500  
-                        },
-                        "placeholderImage": "/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.jpg",
-                        "videoType": "mp4"
-                         
-                    },
-                    {
-                        "type": "image",
-                        "path":  "/jQueryPageBackgroundPro/images/exampleImages/image13.jpg",
-                        "title": "Easily transition and style slide titles.",
-                        "titleVertPosition": "top",
-                        "titleHorzPosition": "center",
-                        "titleTransition": {
-                            "fade": true,
-                            "slide": "bottom"  
-                        },
-                    },
-                    {
-                        "type": "image",
-                        "path":  "/jQueryPageBackgroundPro/images/exampleImages/image9.jpg",
-                        "title": "Transition finished call back hooks.",
-                        "titleVertPosition": "top",
-                        "titleHorzPosition": "center",
-                        "titleTransition": {
-                            "fade": true, 
-                            "slide": "top" 
-                        }, 
-                    }
-                ],
-                "targetElement": $('#block-element'),
-                "transition": "slide",
-                "transitionDirection": "left-right",
-                "easing": "easeOutQuad",  // see http://api.jqueryui.com/easings/
-                "speed": 700,
-                 
-                /* slide show */
-                "slideShow": false,
-                "slideShowSpeed": 3000,
-                 
-                /* control arrows */
-                "controlArrow": "arrow-14-white",
-                "controlVertPosition": "jqpbp-controls-bottom",
-                 
-                /* navigation */
-                "navigation":{
-                    "show": true,
-                    "style": "square",         //['round', 'square']
-                    "numbers": true,
-                    "vertPostiton": "bottom", //top, bottom
-                    "horzPostiion": "center",  //left, center, right
-                    "thumbnail": true
-                },
-                 
-                "extControlSelector": ".primary-nav .nav-link",
-                "extControlEvent": "click",
-                "extControlAction": "next",
-                 
-                "debug": true
-            });
+<!-- scripts.js ----------------------------------------------------------->//slides
+var imgSlideTemplate = {
+        "type": "image",
+        "path":  "/js/ontraport/opt_assets/blocks/common/jQueryPageBackgroundPro/images/exampleImages/image13.jpg",
+        "title": "Easily transition and style slide titles.",
+        "titleVertPosition": "top",
+        "titleHorzPosition": "center",
+        "titleTransition": {
+            "fade": true,
+            "slide": "bottom"  
+        }
+    }
+var videoSlideTemplate = {
+        "type": "video",
+        "path": "/js/ontraport/opt_assets/blocks/common/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.mp4",
+        "title": "Supports HTML5 mp4 video background.",
+        "titleVertPosition": "top",
+        "titleHorzPosition": "center",
+        "titleTransition": {
+            "fade": true,
+            "slide": "top",
+            "speed": 3000,
+            "distance": 500  
+        },
+        "placeholderImage": "/js/ontraport/opt_assets/blocks/common/jQueryPageBackgroundPro/images/exampleVideos/exampleVideo1.jpg",
+        "videoType": "mp4"
+         
+    }
+    
+// note you need to adjust these selectors to be specific to your block    
+var $slideShowElement =  $("/*opt-uuid-class*/ .slide-show-17 .js-opt-slide-show");     
+var $slides = $slideShowElement.find(".js-slide");
+var slides = [];
+var slide = null; 
+var $title = null,
+    $html = null,
+    $slideButton = null;
+
+    $slides.each( function( index, item ) {
+        $item = $( item ); 
+        slide = $.extend( true, {}, imgSlideTemplate );
+        
+        //build the slide title
+        $title = $item.find(".js-opt-slide-title").clone();
+        $title.removeAttr("opt-id opt-type opt-alias");
+        
+        //build the slide message
+        $html = $item.find(".js-opt-slide-html").clone();
+        $html.removeAttr("opt-id opt-type opt-alias");
+        
+        //build slide button
+        $slideButton = $item.find(".js-opt-slide-button").clone();
+
+        $slideButton.removeAttr("opt-id opt-type opt-alias");
+        
+        slide.title = $title[0].outerHTML + $html[0].outerHTML + $slideButton[0].outerHTML;
+        slide.path = $item.find(".js-opt-slide-img").attr( "src" );
+        slide.titleCustomStyle = "slide-show-17__title-wrapper";
+        slides.push( slide );
+    }); 
+    
+var slideShowDuration = $slideShowElement.attr("slideShowDuration");
+var slideShow = $slideShowElement.attr("slideShow");
+
+var $slider = $("/*opt-uuid-class*/ .slide-show-17 .jQueryPageBackgroundPro")
+
+if ( plugin = $slider.data("plugin_jQueryPageBackgroundPro") ) { 
+     plugin.destroy();
+}
+
+$slider.jQueryPageBackgroundPro( {
+    
+    "backgrounds": slides,
+     
+    /* slide show */
+    "slideShow": slideShow,
+    "slideShowSpeed": slideShowDuration,
+     
+    /* control arrows */
+    "controlArrow": "arrow-24-white",
+     
+    /* navigation */
+    "navigation": {
+        "show": true,
+        "style": "round",         //['round', 'square']
+        "numbers": false,
+        "vertPosition": "bottom", //top, bottom
+        "horzPosition": "center", //left, center, right
+        "thumbnail": false
+    }
+ 
+});
+
 
