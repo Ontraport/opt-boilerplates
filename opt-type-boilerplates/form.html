@@ -1,30 +1,79 @@
-<form opt-type="form" opt-id="contact_form" action="[system_form_processor]" method="post" accept-charset="UTF-8">
-     
-    <!--input template --->
-    <div class="field" opt-type="template" opt-id=”temp” style="display:none;">
-        <label opt-type="html"></label>
-        <input type="text" opt-type="input" />
-    </div>   
- 
-    <!-- default inputs -->
-    <div class="field">
-        <label opt-type="html"></label>
-        <input type="text" opt-type="input" />
+<form role="form" accept-charset="UTF-8" method="post" action="[system_form_processor]">
+
+    <!--The form block must be placed within the form tags (because of button)-->
+    <div opt-id="form-1" opt-type="form group" opt-alias="Form">
+
+        <!--This content is the initial default form fields. If different fields are needed, see 
+        opt_assets/utils/breed/form-field-names.json for proper naming to link fields to system's fields-->
+        <div class="row" opt-type="group" opt-id="Name">
+            <label class="dark-color-text body-text" for="firstname" opt-type="html" opt-id="firstname-label" opt-alias="First Name Label" opt-for="firstname-input">First Name</label>
+            <input class="dark-color-border dark-color-text" type="text" name="firstname" opt-type="input" opt-id="firstname-input" opt-alias="First Name Input" id="firstname">
+        </div>
+
+        <div class="row" opt-type="group" opt-id="Email">
+            <label class="dark-color-text body-text" for="lastname" opt-type="html" opt-id="lastname-label" opt-alias="Last Name Label" pt-for="lastname-input">Last Name</label>
+            <input class="dark-color-border dark-color-text" type="text" name="lastname" opt-type="input" opt-id="lastname-input" opt-alias="Last Name Input" id="lastname">
+        </div>
+
+        <div class="row" opt-type="group" opt-id="Phone">
+            <label class="dark-color-text body-text" for="email" opt-type="html" opt-id="email-label" opt-for="email-input">Email</label>
+            <input class="dark-color-border dark-color-text" type="email" name="email" opt-type="input" opt-id="email-input" id="email">
+        </div>
+        <!--End default content -->
+        
+        <!--This is the input template that will be stamped out when input fields are added. DO NOT change markup, except for class names if needed -->
+        <template data-controlType="input">
+
+            <div class="row" opt-type="group" opt-id="{fieldname}" opt-alias="{alias}">
+                <label class="dark-color-text body-text" for="{fieldname}" opt-type="html" opt-id="{fieldname}-label" opt-for="{fieldname}-input">{label.html}</label>
+
+                <input class="dark-color-border dark-color-text" type="{input.type}" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}">
+            </div>
+
+        </template>
+
+        <!--This is the textarea template that will be stamped out when textarea fields are added. DO NOT change markup, except for class names if needed -->
+        <template data-controlType="textarea">
+
+            <div class="row" opt-type="group" opt-id="{fieldname}" opt-alias="{alias}">
+                <label class="dark-color-text body-text" for="{fieldname}" opt-type="html" opt-id="{fieldname}-label" opt-for="{fieldname}-input">{label.html}</label>
+
+                <textarea class="dark-color-border dark-color-text" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}"></textarea>
+                
+            </div>
+
+        </template>
+
+        <!--This is the select template that will be stamped out when select fields are added. DO NOT change markup, except for class names if needed -->
+        <template data-controlType="select">
+
+            <div class="row" opt-type="group" opt-id="{fieldname}" opt-alias="{alias}">
+                <label class="dark-color-text body-text" for="{fieldname}" opt-type="html" opt-id="{fieldname}-label" opt-for="{fieldname}-input">{label.html}</label>
+
+                <select class="dark-color-border dark-color-text" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}">
+                    <option>Select</option>
+                </select>
+                
+            </div>
+
+        </template>
+
+        <!--This is the checkbox input template that will be stamped out when  checkbox input fields are added. This is necessary because the input & label markup is reversed. DO NOT change markup, except for class names if needed -->
+        <template data-controlType="checkbox">
+
+            <div class="row" opt-type="group" opt-id="{fieldname}" opt-alias="{alias}">
+                <input class="dark-color-border" type="{input.type}" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}">
+
+                <label class="dark-color-text body-text" for="{fieldname}" opt-type="html" opt-id="{fieldname}-label" opt-for="{fieldname}-input">{label.html}</label>
+            </div>
+
+        </template>
+
     </div>
-    <div class="field">
-        <label opt-type="html"></label>
-        <input type="text" opt-type="input" />
+
+    <!--This is the submit button. It must be outside of the form div, because it uses the button palette editor -->
+    <div class="row">
+        <input type="submit" value="Submit" opt-type="button" opt-id="submit-button" opt-alias="Button" class="button button-style dark-color-border dark-color-text">
     </div>
-    <div class="field">
-        <label opt-type="html"></label>
-        <input type="text" opt-type="input" />
-    </div>           
-     
-    <!-- Submit Button -->
-    <div class="field">
-        <input id="submit" opt-id="submit" opt-type="button" type="submit" name="submit" value="Sign up now!"/>
-    </div>
- 
-    <!-- ONTRAPORT form scripts ---> 
-    <span style="display:none">[system_form_fields]</span>
+
 </form>
