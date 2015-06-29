@@ -50,8 +50,8 @@
             <div class="row" opt-type="group" opt-id="{fieldname}" opt-alias="{alias}">
                 <label class="dark-color-text body-text" for="{fieldname}" opt-type="html" opt-id="{fieldname}-label" opt-for="{fieldname}-input">{label.html}</label>
 
-                <select class="dark-color-border dark-color-text" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}">
-                    <option>Select</option>
+                <select class="dark-color-border dark-color-text" name="{fieldname}" opt-type="input" opt-id="{fieldname}-input" id="{fieldname}" opt-options="{input.options}">
+                    {htmlOptions}
                 </select>
                 
             </div>
