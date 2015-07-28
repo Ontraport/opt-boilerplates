@@ -1,1 +1,1 @@
-//block scripts
+/* block scripts */
